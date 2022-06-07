@@ -1,0 +1,82 @@
+\documentclass[twocolumn]{article}
+
+\usepackage[greek,english]{babel} % necessary to write in Greek, use with \textgreek{}
+\usepackage[utf8]{inputenc} % same as above
+\usepackage{geometry} % for margin and padding
+\usepackage[export]{adjustbox} 
+\usepackage{amsmath} % for math. Use with `align` or `align*` environment
+\usepackage{amsfonts}
+% uncomment to use package for circuit design
+%\usepackage{circuitikz}
+
+\setlength{\columnsep}{4cm}
+% this package allows using images next to block of texts (as opposed to in between blocks)
+% note that it can be quite buggy. Avoid using it for text blocks that near the end of a page
+% as it can cause visual artifacts and undesired behaviour of elements
+\usepackage{wrapfig}
+
+% instead of using a big file for a paper, use instead smaller chunks.
+\usepackage{subfiles}
+
+% general formatting settings
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\newgeometry{vmargin={15mm}, hmargin={13mm,13mm}}
+% ---------------------------
+
+% note that paths are relative to the working directory (the directory you build the LaTeX file from).
+% Here, it's assumed that the working directory is one level higher than the directory that includes
+% this file. In other words, it's the parent directory of `src`.
+
+\linespread{1}
+
+\begin{document}
+    % --- Here, you enter the title and other relevant information ---
+    \twocolumn[{
+        \includegraphics[width=0.4\textwidth]{res/img/logo.png}\par\vspace{1ex} % Logo (ΕΚΠΑ) -- change it with appropriate logo, if necessary.
+        \centering{
+        \Huge\textsf{\textgreek{Άσκηση 42}}\par}\vspace{3ex} % General title
+        {\Large\textsf{\textgreek{Παπαδόπουλος Ιωάννης} | 0000202069420}\par}\vspace{2ex} % name of author
+        \textsf{9-9-99 | \textgreek{Υπέυθυνoς: Σαουμπούμπου}}\par\vspace{4ex} % other info (here, date and tutor) 
+        % ----------------- MAIN TEXT -----------------
+        \textbf{\textsf{\textgreek{Σκοπός άσκησης}}}\par\vspace{1ex}
+        \textgreek{Εισαγωγή Σκοπού Εδώ}\par\vspace{3ex}}] % Insert here the purpose of the project/the abstract.
+
+    %--- Theory ---
+    \section{\textsf{\textgreek{Θεωρητικό Πλαίσιο}}}
+
+    \subfile{src/theory}
+    % ---------------
+
+    % --- Experiment Equipment and General Set-up ---
+    \section{\textsf{\textgreek{Πειραματική Διάταξη}}}
+
+    \subfile{src/whatuse}
+    % ------------------------------------------------
+
+    % --- Experiment Process ---
+    \section{\textsf{\textgreek{Πειραματική Διαδικασία}}}
+
+    \subfile{src/howto}
+    % ---------------------------
+
+    % --- Data Analysis ---
+    \section{\textsf{\textgreek{Ανάλυση Δεδομένων}}}
+
+    \subfile{src/data}
+    % ---------------------------
+
+    % --- General Notes ---
+    \section{\textsf{\textgreek{Παρατηρήσεις και Σχόλια}}}
+
+    \subfile{src/notes}
+    % ---------------------
+
+    % --- Resources ---
+    \section{\textsf{\textgreek{Βιβλιογραφία}}}
+
+    % ------------------
+\end{document}
