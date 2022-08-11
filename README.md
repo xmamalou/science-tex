@@ -15,3 +15,5 @@ To compile your LaTeX document, you need to compile `src/main.tex` using the `lu
 ```
 lualatex src/main.tex
 ```
+### 3RD-PARTY RESOURCES
+Science Tex uses the FOSS font JetBrains Mono as its main font.
