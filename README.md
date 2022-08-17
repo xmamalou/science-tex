@@ -12,7 +12,7 @@ Thus, you will need to install the following packages in your system, from your 
 
 If you want to use CirkuiTikZ, you also need `texlive-pictures`
 
-You can add your own packages (like `chemformula`) in the preamble of the `src/main.tex` file, as long as you make sure that you have installed the required dependencies.
+You can add your own packages (like `chemformula` for Chemical Equations) in the preamble of the `src/main.tex` file, as long as you make sure that you have installed the required dependencies.
 
 ## COMPILING
 To compile your LaTeX document, you need to compile `src/main.tex` using the `lualatex` command (**NOT** `luatex` or `pdflatex`!) like so:
