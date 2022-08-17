@@ -23,8 +23,8 @@ lualatex src/main.tex
 ## NOTES
 * If you want to write in a language that uses a script other than the Latin one (ex. Greek, Cyrillic, Japanese) you don't need any special package or environment. Just write as you would when writing English (or another language that uses the Latin alphabet).
 * Some editors consider that the working directory is the one that contains the `main.tex` file (`src`), not its parent. If you get any error related to the fonts not being found, that's the reason. Change the directory the template searches the fonts in accordingly (just replace `./res/fonts` with `../res/fonts`).
-* * Likewise, if you want to have a working directory other than the parent of `src` then you need to edit that path accordingly.
-* * Remember that any resource you use is found based on its relative path (to the working directory), so be careful when typing directories. 
+** Likewise, if you want to have a working directory other than the parent of `src` then you need to edit that path accordingly.
+** Remember that any resource you use is found based on its relative path (to the working directory), so be careful when typing directories. 
 
 ## 3RD-PARTY RESOURCES
 Science Tex uses the FOSS font JetBrains Mono as its main font.
