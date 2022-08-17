@@ -1,8 +1,10 @@
 # SCIENCE TEX
 This is a LaTeX template useful for those who want to make a nice and professional looking research paper.
 
+(The following concerns Linux systems or WSL. For Windows, you can use an editor to do the required work for you. You may need to add specific arguments to use the LuaLatex renderer. For example, for [TexStudio](https://tex.stackexchange.com/questions/236747/tell-texstudio-to-compile-a-particular-document-with-lualatex))
+
 ## DEPENDENCIES
-The template includes plenty of packages useful for physics and math. It also required lualatex to be compiled.
+The template includes plenty of packages useful for physics and math. It also requires lualatex to be compiled.
 Thus, you will need to install the following packages in your system, from your package manager:
 - texlive-latex-base
 - texlive-latex-recommended
