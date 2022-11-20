@@ -1,4 +1,4 @@
-\documentclass[twocolumn]{article}
+\documentclass[12pt]{article}
 
 \usepackage{geometry} % for margin and padding
 \usepackage{fancyhdr} % for footer and header
@@ -14,7 +14,7 @@
 
 \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
 \setmainfont[
-	Path		= ./res/fonts/,
+	Path		= ../res/fonts/,
 	Extension	= .ttf,
 	Ligatures 	= TeX,
 	BoldFont	= JetBrains Mono-Bold,
@@ -23,10 +23,6 @@
 ]{JetBrains Mono-Regular}
 
 \setlength{\columnsep}{4cm}
-% this package allows using images next to block of texts (as opposed to in between blocks)
-% note that it can be quite buggy. Avoid using it for text blocks that near the end of a page
-% as it can cause visual artifacts and undesired behaviour of elements
-\usepackage{wrapfig}
 
 % instead of using a big file for a paper, use instead smaller chunks.
 \usepackage{subfiles}
@@ -53,48 +49,47 @@
     \lhead{Publisher, 1999 September 9\par Copyright Notice}
     
     % --- Here, you enter the title and other relevant information ---
-    \twocolumn[{
-        \hspace{90ex}\includegraphics[width=0.4\textwidth]{res/img/logo.png}\par\vspace{1ex} % Logo (ΕΚΠΑ) -- change it with appropriate logo, if necessary. 
-        \centering{
-        \Huge TITLE OF RESEARCH\par}\vspace{3ex} % General title
-        {\Large John Doe\par}\vspace{2ex} % name of author
-        University of Kolopetinitsa\par\vspace{4ex} % other info (here, date and tutor) 
-        % ----------------- MAIN TEXT -----------------
-        \textbf{ABSTRACT}\par\vspace{1ex}
-        This is an abstract, where you put your research's basic points and findings\par\vspace{3ex}}] % Insert here the purpose of the project/the abstract.
+    \hspace{90ex}\includegraphics[width=0.4\textwidth]{../res/img/logo.png}\par\vspace{1ex} % Logo (ΕΚΠΑ) -- change it with appropriate logo, if necessary. 
+ 	
+    {\Huge\centering TITLE OF RESEARCH\par}\vspace{3ex} % General title
+    {\Large\centering John Doe\par}\vspace{2ex} % name of author
+    {\centering University of Kolopetinitsa\par}\vspace{4ex} % other info (here, date and tutor) 
+    % ----------------- MAIN TEXT -----------------
+    {\centering\textbf{ABSTRACT}\par}\vspace{1ex}
+    {\centering This is an abstract, where you put your research's basic points and findings\par\vspace{3ex}} % Insert here the purpose of the project/the abstract.
 
     %--- The theory and the problem ---
-    \section{INTRODUCTION}
+    \section{\raggedright INTRODUCTION}
 
-    \subfile{src/theory}
+    \subfile{theory}
     % ---------------
 
     % --- The method ---
-    \section{THE METHOD}
+    \section{\raggedright THE METHOD}
 
-    \subfile{src/howto}
+    \subfile{howto}
     % ------------------------------------------------
 
     % --- Data Analysis ---
-    \section{THE RESULTS}
+    \section{\raggedright THE RESULTS}
 
-    \subfile{src/data}
+    \subfile{data}
     % ---------------------------
 
     % --- General Notes ---
-    \section{NOTES}
+    \section{\raggedright NOTES}
 
-    \subfile{src/notes}
+    \subfile{notes}
     % ---------------------
     
     % --- Conclusion ---
-    \section{CONCLUSION}
+    \section{\raggedright CONCLUSION}
 
-    \subfile{src/conclusion}
+    \subfile{conclusion}
     % ---------------------
 
     % --- Resources ---
-    \section{REFERENCES}
+    \section{\raggedright REFERENCES}
 
     % ------------------
 \end{document}
